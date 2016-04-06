@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DrawView.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+/**
+ *  开始动画按钮点击事件
+ */
+- (IBAction)startAnimationClickAction:(id)sender {
+    DrawView *drawView = (DrawView *)self.view;
+    
+    [drawView startAnimation];
+}
+
+/**
+ *  结束动画按钮点击事件
+ */
+- (IBAction)endAnimationClickAction:(id)sender {
+    DrawView *drawView = (DrawView *)self.view;
+    
+    [drawView endAnimation];
 }
 
 - (void)didReceiveMemoryWarning {
